@@ -1,0 +1,97 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+// size
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+//flex
+@mixin flex($justify, $align, $flexDi) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $flexDi;
+}
+//diplay block
+%display-block { display: block}
+//position
+%relactive { position: relative;}
+%absolute { position: absolute;}
+%fixed {position: fixed;}
+//text
+%text-center { text-align: center;}
+//color
+$color-1 : #fff;
+$color-2 : #eee;
+$color-3 : #ddd;
+$color-4 : #ccc;
+$color-5 : #484848;
+$color-6 : #333;
+//font-size
+$fontsize-1 : .5rem;
+$fontsize-2 : .8rem;
+$fontsize-3 : 1.2rem;
+$fontsize-4 : 2rem;
+$fontsize-5 : 3rem;
+
+#container {
+  @include size(100vw, 100vh);
+  max-width: 1080px;
+  max-height: 2440px;
+  background-color: $color-1;
+  overflow: hidden;
+
+//nav height
+$height-nav : 8vh;
+  & > nav {
+    @include size(inherit, $height-nav);
+    background-color: $color-5;
+    @extend %fixed;
+    bottom: 0;
+    z-index: 1;
+    ul {
+      @include size(inherit, inherit);
+      @include flex(space-between, center, row);
+      li {
+        height: inherit;
+        flex: 1;
+        list-style: none;
+        a {
+          @extend %display-block;
+          height: inherit;
+          line-height: $height-nav;
+          @extend %text-center;
+          font-size: $fontsize-4;
+          color: $color-1;
+        }
+      }
+    }
+  }
+  & > #wrap {
+    // 상대값으로 size mixin을 고려해보세요.
+    @include size(300%, 100%);
+    display: flex;
+    @extend %relactive;
+    section {
+      @include size(100%,100%);
+      transition: .3s;
+    }
+    section:nth-child(1) {
+      background-color: #fcf;
+    }
+    section:nth-child(2) {
+      background-color: $color-4;
+    }
+    section:nth-child(3) {
+      background-color: #cfc;
+    }
+  }
+  
+}

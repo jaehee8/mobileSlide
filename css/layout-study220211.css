@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+#container > nav ul li a {
+  display: block;
+}
+
+#container > #wrap {
+  position: relative;
+}
+
+#container > nav {
+  position: fixed;
+}
+
+#container > nav ul li a {
+  text-align: center;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+}
+#container > nav {
+  width: inherit;
+  height: 8vh;
+  background-color: #484848;
+  bottom: 0;
+  z-index: 1;
+}
+#container > nav ul {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+#container > nav ul li {
+  height: inherit;
+  flex: 1;
+  list-style: none;
+}
+#container > nav ul li a {
+  height: inherit;
+  line-height: 8vh;
+  font-size: 2rem;
+  color: #fff;
+}
+#container > #wrap {
+  width: 3240px;
+  height: 2440px;
+  display: flex;
+}
+#container > #wrap section {
+  width: 1080px;
+  height: 2440px;
+  transition: 0.3s;
+}
+#container > #wrap section:nth-child(1) {
+  background-color: #fcf;
+}
+#container > #wrap section:nth-child(2) {
+  background-color: #ccc;
+}
+#container > #wrap section:nth-child(3) {
+  background-color: #cfc;
+}/*# sourceMappingURL=layout-study220211.css.map */
