@@ -1,10 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
 }
 
 a {
   color: #333;
+  font-size: inherit;
   text-decoration: none;
 }
 
@@ -12,7 +18,7 @@ a {
   display: block;
 }
 
-#container > #wrap {
+#container > #wrap section, #container > #wrap {
   position: relative;
 }
 
@@ -27,6 +33,8 @@ a {
 #container {
   width: 100vw;
   height: 100vh;
+  max-width: 1080px;
+  max-height: 2440px;
   background-color: #fff;
   overflow: hidden;
 }
@@ -57,13 +65,13 @@ a {
   color: #fff;
 }
 #container > #wrap {
-  width: 3240px;
-  height: 2440px;
+  width: 300%;
+  height: 100%;
   display: flex;
 }
 #container > #wrap section {
-  width: 1080px;
-  height: 2440px;
+  width: 100%;
+  height: 100%;
   transition: 0.3s;
 }
 #container > #wrap section:nth-child(1) {
@@ -74,4 +82,10 @@ a {
 }
 #container > #wrap section:nth-child(3) {
   background-color: #cfc;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=layout-study220211.css.map */
