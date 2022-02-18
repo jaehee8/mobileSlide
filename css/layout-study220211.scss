@@ -4,9 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  font-size: 16px;
-}
+
 a {
   color: #333;
   font-size: inherit;
@@ -73,7 +71,7 @@ $height-nav : 8vh;
           height: inherit;
           line-height: $height-nav;
           @extend %text-center;
-          font-size: $fontsize-4;
+          font-size: $fontsize-2;
           color: $color-1;
         }
       }
@@ -100,12 +98,4 @@ $height-nav : 8vh;
     }
   }
   
-}
-@media (max-width: 768px) { //태블릿 디바이스 이하
-  body {
-    font-size: 12px;
-    & a {
-      font-size: 1rem;
-    }
-  }
 }
