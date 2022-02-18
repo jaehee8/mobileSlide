@@ -104,5 +104,8 @@ $height-nav : 8vh;
 @media (max-width: 768px) { //태블릿 디바이스 이하
   body {
     font-size: 12px;
+    & a {
+      font-size: 1rem;
+    }
   }
 }

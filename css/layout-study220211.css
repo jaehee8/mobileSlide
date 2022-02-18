@@ -88,4 +88,7 @@ a {
   body {
     font-size: 12px;
   }
+  body a {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=layout-study220211.css.map */
